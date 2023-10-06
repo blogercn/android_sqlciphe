@@ -1,14 +1,14 @@
-LOCAL_PATH := $(call my-dir)
+#LOCAL_PATH := $(call my-dir)
 
-include $(CLEAR_VARS)
-LOCAL_MODULE    := libssl
-LOCAL_SRC_FILES := ssl/$(TARGET_ARCH_ABI)/libssl.so
-include $(PREBUILT_SHARED_LIBRARY)
+#include $(CLEAR_VARS)
+#LOCAL_MODULE    := libssl
+#LOCAL_SRC_FILES := ssl/$(TARGET_ARCH_ABI)/libssl.so
+#include $(PREBUILT_SHARED_LIBRARY)
 
-include $(CLEAR_VARS)
-LOCAL_MODULE    := libcrypto
-LOCAL_SRC_FILES := ssl/$(TARGET_ARCH_ABI)/libcrypto.so
-include $(PREBUILT_SHARED_LIBRARY)
+#include $(CLEAR_VARS)
+#LOCAL_MODULE    := libcrypto
+#LOCAL_SRC_FILES := ssl/$(TARGET_ARCH_ABI)/libcrypto.so
+#include $(PREBUILT_SHARED_LIBRARY)
 
 
 #include $(CLEAR_VARS)
@@ -29,7 +29,7 @@ include $(PREBUILT_SHARED_LIBRARY)
 #include $(BUILD_SHARED_LIBRARY)
 
 
-#LOCAL_PATH := $(call my-dir)
+LOCAL_PATH := $(call my-dir)
 
 android_sqlite_cflags :=  -DHAVE_USLEEP=1 \
 	-DSQLITE_DEFAULT_JOURNAL_SIZE_LIMIT=1048576 -DSQLITE_THREADSAFE=1 -DNDEBUG=1 \
@@ -58,10 +58,10 @@ include $(PREBUILT_STATIC_LIBRARY)
 
 
 include $(CLEAR_VARS)
-LOCAL_MODULE            := sqlite3
+LOCAL_MODULE            := sqlite3_ext
 LOCAL_LDLIBS += -llog
 LOCAL_SRC_FILES         := $(sqlcipher_files)
-LOCAL_C_INCLUDES        := src #sqlcipher
+LOCAL_C_INCLUDES        := src
 LOCAL_CFLAGS            := $(android_sqlite_cflags) $(sqlcipher_cflags)
 LOCAL_STATIC_LIBRARIES 	:= static-libcrypto
 include $(BUILD_SHARED_LIBRARY)
