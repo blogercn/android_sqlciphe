@@ -1,10 +1,10 @@
 # android_sqlciph 
-#cd jni
-##设置你的NDK路径
+## cd jni
+## 设置你的NDK路径
 export PATH=$PATH:/Users/jiazhiguo/Library/Android/sdk/ndk/25.0.8775105/
-#执行命令
+## 执行命令
 ndk-build
-#在项目中应用
+## 在项目中应用
     const char* pwd = "abcdefg";
     result = sqlite3_open(path, &db);
 
