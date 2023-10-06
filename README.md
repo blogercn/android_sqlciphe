@@ -1,4 +1,4 @@
-# android_sqlciph 
+# android_sqlciphe 
 ### 克隆代码
 git clone  https://github.com/blogercn/android_sqlciphe.git
 ### 进入工作目录
