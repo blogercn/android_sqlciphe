@@ -7,6 +7,10 @@ cd jni
 export PATH=$PATH:/Users/jiazhiguo/Library/Android/sdk/ndk/25.0.8775105/
 ### 执行命令
 ndk-build
+这个命令有一些参数可以帮助我们编译，比如指定目录，指定Application.mk路径，指定android.mk路径,感觉除了android.mk文件，其他变量都可以指定：
+ndk-build NDK_PROJECT_PATH=.       
+NDK_APPLICATION_MK=Application.mk
+APP_BUILD_SCRIPT := $(LOCAL_PATH)/Android.mk
 ### 生成so库
 ### 在项目中应用
     const char* pwd = "abcdefg";
